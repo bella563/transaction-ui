@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Frontend - React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Ce projet utilise **React** pour la construction du frontend. L'application permet aux utilisateurs de gérer des transactions via une interface graphique. Elle communique avec un backend Java via des API REST pour récupérer et envoyer des données.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Prérequis
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Avant de démarrer l'application frontend, vous devez avoir installé les outils suivants sur votre machine :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Node.js** et **npm** (version 14 ou supérieure)
+  - Vérifiez que Node.js et npm sont installés en exécutant les commandes suivantes :
+    ```bash
+    node -v
+    npm -v
+    ```
 
-### `npm test`
+- Un **éditeur de texte** comme **Visual Studio Code**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Étape 1 : Cloner le Repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clonez le projet depuis votre dépôt Git :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://votre-repository-url.git
+cd nom_du_projet
+Étape 2 : Installer les Dépendances
+Dans le répertoire du projet, installez toutes les dépendances nécessaires en exécutant la commande suivante :
 
-### `npm run eject`
+bash
+Copier le code
+npm install
+Cette commande va installer les dépendances définies dans le fichier package.json du projet.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Étape 3 : Configurer l'URL de l'API Backend
+Le frontend communique avec le backend Java via des requêtes HTTP. Vous devez configurer l'URL de l'API dans un fichier .env.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Créez un fichier .env à la racine du répertoire frontend/ (s'il n'existe pas déjà).
+Ajoutez la ligne suivante pour définir l'URL de l'API backend :
+env
+Copier le code
+REACT_APP_API_URL=http://localhost:8080/api/v1
+Cela permet de relier votre frontend au backend en local.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Étape 4 : Démarrer l'application
+Une fois les dépendances installées et l'API configurée, vous pouvez démarrer l'application en mode développement avec la commande suivante :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm start
+Cela va démarrer le serveur de développement React et ouvrir l'application dans votre navigateur à l'adresse suivante :
 
-## Learn More
+http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Le projet utilise plusieurs bibliothèques pour faciliter le développement :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React : La bibliothèque JavaScript pour créer l'interface utilisateur.
+Axios : Pour effectuer des requêtes HTTP vers l'API backend.
+React Router : Pour gérer la navigation entre les différentes pages.
+Material-UI : Bibliothèque de composants React pour une interface cohérente et moderne.
+dotenv : Pour gérer les variables d'environnement.
+Commandes
+Voici les commandes courantes utilisées pour gérer le projet :
 
-### Code Splitting
+Démarrer l'application en mode développement :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm start
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
